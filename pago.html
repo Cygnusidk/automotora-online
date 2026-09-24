@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoMotors - Pagar</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="usuario-home.html" class="logo">
+        <h2>AutoMotors</h2>
+      </a>
+
+      <nav class="main-nav">
+        <a href="usuario-home.html" class="nav-link">Inicio</a>
+        <a href="blogs.html" class="nav-link">Blogs</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="carrito.html" class="btn-cart">
+          Carrito <span id="cant-carrito" class="cart-badge">0</span>
+        </a>
+        <button class="btn-cerrar-sesion">Cerrar Sesión</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="section-header">
+      <h2 class="section-title">Resumen del Pedido</h2>
+    </div>
+
+    <div class="caja-tabla">
+      <table class="tabla-personalizada">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Subtotal</th>
+          </tr>
+        </thead>
+        <tbody id="resumen-items-pago">
+        </tbody>
+      </table>
+
+      <div class="resumen-tabla">
+        <h3>Total a pagar: <span id="resumen-total-pago">$0</span></h3>
+      </div>
+    </div>
+
+    <div class="section-header" style="margin-top: 30px;">
+      <h2 class="section-title">Datos de Pago</h2>
+    </div>
+
+    <div class="caja-formulario" style="max-width: 600px; margin: 0 0 30px;">
+      <form id="form-pago">
+        <div class="campo">
+          <label for="pago-nombre">Nombre del Titular</label>
+          <input type="text" id="pago-nombre" required>
+          <small class="error-msg" id="error-pago-nombre"></small>
+        </div>
+
+        <div class="campo">
+          <label for="pago-metodo">Método de Pago</label>
+          <select id="pago-metodo" required>
+            <option value="">-- Seleccione un método --</option>
+            <option value="credito">Tarjeta de Crédito</option>
+            <option value="debito">Tarjeta de Débito</option>
+            <option value="transferencia">Transferencia Bancaria</option>
+          </select>
+          <small class="error-msg" id="error-pago-metodo"></small>
+        </div>
+
+        <div id="campos-tarjeta">
+          <div class="campo">
+            <label for="pago-numero">Número de Tarjeta</label>
+            <input type="text" id="pago-numero" placeholder="0000 0000 0000 0000" maxlength="19">
+            <small class="error-msg" id="error-pago-numero"></small>
+          </div>
+
+          <div style="display:flex; gap: 15px;">
+            <div class="campo" style="flex:1;">
+              <label for="pago-vencimiento">Vencimiento (MM/AA)</label>
+              <input type="text" id="pago-vencimiento" placeholder="MM/AA" maxlength="5">
+              <small class="error-msg" id="error-pago-vencimiento"></small>
+            </div>
+            <div class="campo" style="flex:1;">
+              <label for="pago-cvv">CVV</label>
+              <input type="text" id="pago-cvv" placeholder="123" maxlength="4">
+              <small class="error-msg" id="error-pago-cvv"></small>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primario">Confirmar Pago</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+
+    </div>
+  </footer>
+
+  <script src="js/datos.js"></script>
+  <script src="js/carrito.js"></script>
+  <script src="js/validador.js"></script>
+</body>
+</html>

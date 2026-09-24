@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoMotors Admin - Mantenedor de Productos</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-contenido">
+      <a href="admin-home.html" class="logo">
+        <h2>AutoMotors Admin</h2>
+      </a>
+      
+      <nav>
+        <a href="admin-home.html">Dashboard</a>
+        <a href="admin-productos.html" class="activo">Mantenedor Productos</a>
+        <a href="admin-usuarios.html">Mantenedor Usuarios</a>
+      </nav>
+
+      <div class="acciones-header">
+        <a href="index.html" class="btn-header-login">Cerrar Sesión</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <h2 class="titulo-seccion">Mantenedor de Productos</h2>
+
+    <div class="caja-formulario" style="max-width: 700px;">
+      <form id="form-admin-producto">
+        <div class="campo">
+          <label for="prod-nombre">Nombre del Producto / Vehículo</label>
+          <input type="text" id="prod-nombre" required>
+        </div>
+
+        <div class="campo">
+          <label for="prod-categoria">Categoría</label>
+          <select id="prod-categoria" required>
+            <option value="">-- Seleccione categoría --</option>
+            <option value="Deportivos">Deportivos</option>
+            <option value="SUVs">SUVs</option>
+            <option value="Sedanes">Sedanes</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="prod-precio">Precio ($ CLP)</label>
+          <input type="number" id="prod-precio" required>
+        </div>
+
+        <div class="campo">
+          <label for="prod-imagen">Ruta o URL de Imagen</label>
+          <input type="text" id="prod-imagen" placeholder="img/ejemplo.jpg" required>
+        </div>
+
+        <div class="campo">
+          <label for="prod-desc">Descripción</label>
+          <textarea id="prod-desc" required></textarea>
+        </div>
+
+        <button type="submit" class="btn-primario">Guardar Producto</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+
+  </footer>
+
+  <script src="js/datos.js"></script>
+  <script src="js/validador.js"></script>
+</body>
+</html>

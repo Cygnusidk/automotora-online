@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoMotors - Registro</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-contenido">
+      <a href="index.html" class="logo">
+        <h2>AutoMotors</h2>
+      </a>
+      
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="registro.html" class="activo">Registrarse</a>
+      </nav>
+
+      <div class="acciones-header">
+        <a href="login.html" class="btn-header-login">Iniciar Sesión</a>
+        <a href="carrito.html" class="btn-header-cart">Carrito (<span id="cant-carrito">0</span>)</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <div class="caja-formulario">
+      <h2>Registro de Usuario</h2>
+      <p>Completa tus datos para crear una nueva cuenta.</p>
+
+      <form id="form-registro">
+        <div class="campo">
+          <label for="reg-run">RUN (sin puntos, con dígito verificador)</label>
+          <input type="text" id="reg-run" placeholder="19011022K" required>
+          <small class="error-msg" id="error-reg-run"></small>
+        </div>
+
+        <div class="campo">
+          <label for="reg-nombre">Nombre Completo</label>
+          <input type="text" id="reg-nombre" required>
+          <small class="error-msg" id="error-reg-nombre"></small>
+        </div>
+
+        <div class="campo">
+          <label for="reg-correo">Correo Electrónico</label>
+          <input type="email" id="reg-correo" placeholder="ejemplo@duoc.cl" required>
+          <small class="error-msg" id="error-reg-correo"></small>
+        </div>
+
+        <div class="campo">
+          <label for="reg-pass">Contraseña</label>
+          <input type="password" id="reg-pass" required>
+          <small class="error-msg" id="error-reg-pass"></small>
+        </div>
+
+        <div class="campo">
+          <label for="reg-region">Región</label>
+          <select id="reg-region" required>
+            <option value="">Selecciona una región</option>
+            <option value="Metropolitana">Región Metropolitana</option>
+            <option value="Valparaiso">Región de Valparaíso</option>
+            <option value="Biobio">Región del Bío Bío</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="reg-comuna">Comuna</label>
+          <select id="reg-comuna" required>
+            <option value="">Selecciona una comuna</option>
+            <option value="Santiago">Santiago</option>
+            <option value="Providencia">Providencia</option> 
+            <option value="Viña del Mar">Viña del Mar</option>
+            <option value="Las Condes">Las Condes</option>
+            <option value="Vitacura">Vitacura</option>
+            <option value="Maipú">Maipú</option>
+            <option value="Concón">Concón</option>
+            <option value="Valparaíso">Valparaíso</option>
+            <option value="Quilpué">Quilpué</option>
+            <option value="Concepción">Concepción</option>
+            <option value="Talcahuano">Talcahuano</option>
+            <option value="San Pedro de la Paz">San Pedro de la Paz</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-primario">Crear Cuenta</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+
+  </footer>
+
+  <script src="js/datos.js"></script>
+  <script src="js/carrito.js"></script>
+  <script src="js/validador.js"></script>
+</body>
+</html>

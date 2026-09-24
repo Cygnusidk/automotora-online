@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoMotors - Blog de Noticias y Consejos</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-contenido">
+      <a href="index.html" class="logo">
+        <h2>AutoMotors</h2>
+      </a>
+      
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="blogs.html" class="activo">Blogs</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="registro.html">Registrarse</a>
+      </nav>
+
+      <div class="acciones-header">
+        <a href="login.html" class="btn-header-login">Iniciar Sesión</a>
+        <a href="carrito.html" class="btn-header-cart">Carrito (<span id="cant-carrito">0</span>)</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <section class="banner">
+      <h1>Blog Automotriz</h1>
+      <p>Noticias, consejos de mantenimiento y novedades del mundo del motor.</p>
+    </section>
+
+    <h2 class="titulo-seccion">Artículos Destacados</h2>
+
+    <div class="grid-products">
+      
+      <article class="card">
+        <img src="img/mustang.jpg" alt="Mantenimiento deportivo">
+        <div class="card-body">
+          <p class="categoria-texto">Mantenimiento</p>
+          <h3>5 Consejos para el mantenimiento de un auto deportivo</h3>
+          <p style="color: #666; font-size: 0.9rem; margin-bottom: 15px;">Aprende cómo cuidar el motor, frenos y suspensión de vehículos de alto rendimiento para maximizar su vida útil.</p>
+          <button class="btn">Leer artículo</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="img/rav4.jpg" alt="Guía de compra SUV">
+        <div class="card-body">
+          <p class="categoria-texto">Guías de Compra</p>
+          <h3>Guía de compra: ¿Cómo elegir la SUV ideal para tu familia?</h3>
+          <p style="color: #666; font-size: 0.9rem; margin-bottom: 15px;">Comparamos espacio interior, eficiencia de combustible, seguridad y tracción para ayudarte a tomar la mejor decisión.</p>
+          <button class="btn">Leer artículo</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="img/bmw3.jpg" alt="Sedán Premium vs SUV">
+        <div class="card-body">
+          <p class="categoria-texto">Comparativas</p>
+          <h3>Sedán Premium vs SUV: ¿Cuál se adapta mejor a tu estilo de vida?</h3>
+          <p style="color: #666; font-size: 0.9rem; margin-bottom: 15px;">Analizamos el desempeño en carretera, la comodidad en viajes largos y los costos de mantención de ambos segmentos.</p>
+          <button class="btn">Leer artículo</button>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <footer>
+
+  </footer>
+
+  <script src="js/datos.js"></script>
+  <script src="js/carrito.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoMotors - Panel de Administración</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-contenido">
+      <a href="admin-home.html" class="logo">
+        <h2>AutoMotors Admin</h2>
+      </a>
+      
+      <nav>
+        <a href="admin-home.html" class="activo">Dashboard</a>
+        <a href="admin-productos.html">Mantenedor Productos</a>
+        <a href="admin-usuarios.html">Mantenedor Usuarios</a>
+      </nav>
+
+      <div class="acciones-header">
+        <a href="index.html" class="btn-header-login">Cerrar Sesión</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <section class="banner">
+      <h1>Bienvenido al Sistema</h1>
+      <p>Seleccione una opción del menú superior para gestionar los datos internos de la plataforma.</p>
+    </section>
+
+    <h2 class="titulo-seccion">Módulos de Gestión</h2>
+
+    <div class="grid-products">
+      
+      <article class="card">
+        <div class="card-body">
+          <p class="categoria-texto">Catálogo</p>
+          <h3>Mantenedor de Productos</h3>
+          <p style="color: #666; font-size: 0.9rem; margin-bottom: 20px; flex: 1;">Añade, edita o elimina vehículos del catálogo público, gestiona precios y stock.</p>
+          <a href="admin-productos.html" class="btn" style="text-decoration: none; text-align: center;">Ingresar a Productos</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-body">
+          <p class="categoria-texto">Cuentas</p>
+          <h3>Mantenedor de Usuarios</h3>
+          <p style="color: #666; font-size: 0.9rem; margin-bottom: 20px; flex: 1;">Administra el registro de clientes, roles del sistema y permisos de acceso.</p>
+          <a href="admin-usuarios.html" class="btn" style="text-decoration: none; text-align: center;">Ingresar a Usuarios</a>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <footer>
+
+  </footer>
+
+  <script src="js/datos.js"></script>
+</body>
+</html>

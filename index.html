@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoMotors - Catálogo de Vehículos</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <h2>AutoMotors</h2>
+      </a>
+      
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link active">Inicio</a>
+        <a href="blogs.html" class="nav-link">Blogs</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+        <a href="registro.html" class="nav-link">Registrarse</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="login.html" class="btn-login">Iniciar Sesión</a>
+        <a href="carrito.html" class="btn-cart">
+          Carrito <span id="cant-carrito" class="cart-badge">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="hero-banner">
+      <h1>Encuentra tu próximo vehículo</h1>
+      <p>Explora nuestro catálogo exclusivo con las mejores ofertas del mercado automotriz.</p>
+    </section>
+
+    <div class="section-header">
+      <h2 class="section-title">Catálogo Disponible</h2>
+    </div>
+    
+    <div class="product-grid" id="contenedor-productos">
+      
+      <article class="product-card">
+        <div class="card-media">
+          <img src="img/mustang.jpg" alt="Ford Mustang GT">
+        </div>
+        <div class="card-body">
+          <span class="product-category">Deportivo</span>
+          <h3 class="product-title">Ford Mustang GT</h3>
+          <div class="card-footer">
+            <span class="product-price">$45.000.000</span>
+            <button class="btn-add-cart btn-agregar" data-id="1">Añadir al Carrito</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="card-media">
+          <img src="img/camaro.jpg" alt="Chevrolet Camaro SS">
+        </div>
+        <div class="card-body">
+          <span class="product-category">Deportivo</span>
+          <h3 class="product-title">Chevrolet Camaro SS</h3>
+          <div class="card-footer">
+            <span class="product-price">$42.000.000</span>
+            <button class="btn-add-cart btn-agregar" data-id="5">Añadir al Carrito</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="card-media">
+          <img src="img/porsche.jpg" alt="Porsche 911 Carrera">
+        </div>
+        <div class="card-body">
+          <span class="product-category">Deportivo Premium</span>
+          <h3 class="product-title">Porsche 911 Carrera</h3>
+          <div class="card-footer">
+            <span class="product-price">$120.000.000</span>
+            <button class="btn-add-cart btn-agregar" data-id="10">Añadir al Carrito</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="card-media">
+          <img src="img/bmw3.jpg" alt="BMW Serie 3">
+        </div>
+        <div class="card-body">
+          <span class="product-category">Sedán Premium</span>
+          <h3 class="product-title">BMW Serie 3 330i</h3>
+          <div class="card-footer">
+            <span class="product-price">$48.000.000</span>
+            <button class="btn-add-cart btn-agregar" data-id="7">Añadir al Carrito</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="card-media">
+          <img src="img/civic.jpg" alt="Honda Civic Sport">
+        </div>
+        <div class="card-body">
+          <span class="product-category">Sedán</span>
+          <h3 class="product-title">Honda Civic Sport</h3>
+          <div class="card-footer">
+            <span class="product-price">$22.000.000</span>
+            <button class="btn-add-cart btn-agregar" data-id="3">Añadir al Carrito</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="card-media">
+          <img src="img/audiq5.jpg" alt="Audi Q5 Sportback">
+        </div>
+        <div class="card-body">
+          <span class="product-category">SUV Premium</span>
+          <h3 class="product-title">Audi Q5 Sportback</h3>
+          <div class="card-footer">
+            <span class="product-price">$52.000.000</span>
+            <button class="btn-add-cart btn-agregar" data-id="9">Añadir al Carrito</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="card-media">
+          <img src="img/cx5.jpg" alt="Mazda CX-5 Signature">
+        </div>
+        <div class="card-body">
+          <span class="product-category">SUV</span>
+          <h3 class="product-title">Mazda CX-5 Signature</h3>
+          <div class="card-footer">
+            <span class="product-price">$26.000.000</span>
+            <button class="btn-add-cart btn-agregar" data-id="6">Añadir al Carrito</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="card-media">
+          <img src="img/jeep.jpg" alt="Jeep Wrangler Rubicon">
+        </div>
+        <div class="card-body">
+          <span class="product-category">Todoterreno</span>
+          <h3 class="product-title">Jeep Wrangler Rubicon</h3>
+          <div class="card-footer">
+            <span class="product-price">$55.000.000</span>
+            <button class="btn-add-cart btn-agregar" data-id="4">Añadir al Carrito</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="card-media">
+          <img src="img/raptor.jpg" alt="Ford F-150 Raptor">
+        </div>
+        <div class="card-body">
+          <span class="product-category">Camioneta</span>
+          <h3 class="product-title">Ford F-150 Raptor</h3>
+          <div class="card-footer">
+            <span class="product-price">$65.000.000</span>
+            <button class="btn-add-cart btn-agregar" data-id="8">Añadir al Carrito</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="card-media">
+          <img src="img/rav4.jpg" alt="Toyota RAV4 Híbrida">
+        </div>
+        <div class="card-body">
+          <span class="product-category">SUV</span>
+          <h3 class="product-title">Toyota RAV4 Híbrida</h3>
+          <div class="card-footer">
+            <span class="product-price">$28.500.000</span>
+            <button class="btn-add-cart btn-agregar" data-id="2">Añadir al Carrito</button>
+          </div>
+        </div>
+      </article>
+
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+    </div>
+  </footer>
+
+  <script src="js/datos.js"></script>
+  <script src="js/carrito.js"></script>
+</body>
+</html>

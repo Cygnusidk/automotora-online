@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoMotors - Mi Cuenta</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="usuario-home.html" class="logo">
+        <h2>AutoMotors</h2>
+      </a>
+
+      <nav class="main-nav">
+        <a href="usuario-home.html" class="nav-link active">Inicio</a>
+        <a href="blogs.html" class="nav-link">Blogs</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+      </nav>
+
+      <div class="header-actions">
+        <span class="bienvenida-usuario" id="texto-bienvenida">Hola, Cliente</span>
+        <a href="carrito.html" class="btn-cart">
+          Carrito <span id="cant-carrito" class="cart-badge">0</span>
+        </a>
+        <button class="btn-cerrar-sesion">Cerrar Sesión</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="hero-banner">
+      <h1>Bienvenido a tu panel de cliente</h1>
+      <p>Explora el catálogo, añade los vehículos que te interesen y gestiona tu carrito de compras.</p>
+    </section>
+
+    <div class="section-header">
+      <h2 class="section-title">Catálogo Disponible</h2>
+    </div>
+
+    <div class="product-grid" id="contenedor-productos">
+      <!-- Las tarjetas de productos se generan dinámicamente en js/carrito.js -->
+    </div>
+
+    <div class="section-header" style="margin-top: 35px;">
+      <h2 class="section-title">Mi Carrito de Compras</h2>
+    </div>
+
+    <div class="caja-tabla">
+      <table class="tabla-personalizada">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Subtotal</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody id="items-carrito">
+        </tbody>
+      </table>
+
+      <div class="resumen-tabla">
+        <h3>Total: <span id="total-carrito">$0</span></h3>
+        <button type="button" class="btn-primario btn-pagar" style="width: auto; padding: 8px 20px;">Pagar</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+
+    </div>
+  </footer>
+
+  <script src="js/datos.js"></script>
+  <script src="js/carrito.js"></script>
+  <script>
+    // Muestra el nombre/correo del usuario que inició sesión (si existe)
+    document.addEventListener("DOMContentLoaded", function () {
+      let sesion = localStorage.getItem("usuarioActivo");
+      let texto = document.getElementById("texto-bienvenida");
+      if (sesion && texto) {
+        let datos = JSON.parse(sesion);
+        texto.textContent = "Hola, " + (datos.nombre || datos.correo || "Cliente");
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoMotors - Contacto</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-contenido">
+      <a href="index.html" class="logo">
+        <h2>AutoMotors</h2>
+      </a>
+      
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="contacto.html" class="activo">Contacto</a>
+        <a href="registro.html">Registrarse</a>
+      </nav>
+
+      <div class="acciones-header">
+        <a href="login.html" class="btn-header-login">Iniciar Sesión</a>
+        <a href="carrito.html" class="btn-header-cart">Carrito (<span id="cant-carrito">0</span>)</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <div class="caja-formulario">
+      <h2>Contáctanos</h2>
+      <p>Envíanos un mensaje y te responderemos a la brevedad.</p>
+
+      <form id="form-contacto">
+        <div class="campo">
+          <label for="nombre">Nombre Completo (Máx 100 caracteres)</label>
+          <input type="text" id="nombre" maxlength="100" required>
+        </div>
+
+        <div class="campo">
+          <label for="email">Correo Electrónico</label>
+          <input type="email" id="email" required>
+        </div>
+
+        <div class="campo">
+          <label for="comentario">Comentario (Máx 500 caracteres)</label>
+          <textarea id="comentario" maxlength="500" required></textarea>
+        </div>
+
+        <button type="submit" class="btn-primario">Enviar Mensaje</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+
+  </footer>
+
+  <script src="js/datos.js"></script>
+  <script src="js/carrito.js"></script>
+  <script src="js/validador.js"></script>
+</body>
+</html>

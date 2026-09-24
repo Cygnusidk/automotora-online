@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoMotors Admin - Mantenedor de Usuarios</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-contenido">
+      <a href="admin-home.html" class="logo">
+        <h2>AutoMotors Admin</h2>
+      </a>
+      
+      <nav>
+        <a href="admin-home.html">Dashboard</a>
+        <a href="admin-productos.html">Mantenedor Productos</a>
+        <a href="admin-usuarios.html" class="activo">Mantenedor Usuarios</a>
+      </nav>
+
+      <div class="acciones-header">
+        <a href="index.html" class="btn-header-login">Cerrar Sesión</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <h2 class="titulo-seccion">Nuevo Usuario Interno</h2>
+
+    <div class="caja-formulario" style="max-width: 700px;">
+      <form id="form-admin-usuario">
+        <div class="campo">
+          <label for="usr-run">RUN (Sin puntos ni guion)</label>
+          <input type="text" id="usr-run" placeholder="Ej: 19011022K" required>
+        </div>
+
+        <div class="campo">
+          <label for="usr-nombre">Nombre Completo</label>
+          <input type="text" id="usr-nombre" required>
+        </div>
+
+        <div class="campo">
+          <label for="usr-tipo">Tipo de Usuario</label>
+          <select id="usr-tipo" required>
+            <option value="">-- Seleccionar --</option>
+            <option value="Administrador">Administrador</option>
+            <option value="Vendedor">Vendedor</option>
+            <option value="Cliente">Cliente</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="usr-region">Región</label>
+          <select id="usr-region" required>
+            <option value="">-- Seleccione región --</option>
+            <option value="Metropolitana">Región Metropolitana</option>
+            <option value="Valparaiso">Región de Valparaíso</option>
+            <option value="Biobio">Región del Bío Bío</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="usr-comuna">Comuna</label>
+          <select id="usr-comuna" required>
+            <option value="">-- Seleccione comuna --</option>
+            <option value="Santiago">Santiago</option>
+            <option value="Providencia">Providencia</option>
+            <option value="Viña del Mar">Viña del Mar</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-primario">Guardar Usuario</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+
+  </footer>
+
+  <script src="js/datos.js"></script>
+  <script src="js/validador.js"></script>
+</body>
+</html>
