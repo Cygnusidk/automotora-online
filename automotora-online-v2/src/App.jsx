@@ -1,10 +1,8 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-// Encabezado
 import Header from './components/Header';
 
-// Páginas Públicas y de Cliente
 import Home from './pages/Home';
 import Blogs from './pages/Blogs';
 import DetalleBlog from './pages/DetalleBlog';
@@ -20,7 +18,6 @@ import DetalleProducto from './pages/DetalleProducto';
 import Categorias from './pages/Categorias';
 import Ofertas from './pages/Ofertas';
 
-// Páginas de Administración
 import AdminHome from './pages/admin/AdminHome';
 import AdminProductos from './pages/admin/AdminProductos';
 import AdminUsuarios from './pages/admin/AdminUsuarios';

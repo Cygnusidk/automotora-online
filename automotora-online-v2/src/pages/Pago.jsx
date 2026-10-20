@@ -6,7 +6,6 @@ const Pago = () => {
   const [metodoPago, setMetodoPago] = useState('tarjeta');
   const navigate = useNavigate();
 
-  // Cargar carrito desde localStorage
   const cargarCarrito = () => {
     try {
       const items = JSON.parse(localStorage.getItem('carrito') || '[]');
@@ -22,14 +21,12 @@ const Pago = () => {
     return () => window.removeEventListener('cartUpdated', cargarCarrito);
   }, []);
 
-  // Guardar cambios y notificar al header y carrito
   const guardarCarrito = (nuevoCarrito) => {
     setCarrito(nuevoCarrito);
     localStorage.setItem('carrito', JSON.stringify(nuevoCarrito));
     window.dispatchEvent(new Event('cartUpdated'));
   };
 
-  // Cambiar cantidad (+ / -) directamente en el resumen de pago
   const cambiarCantidad = (index, cambio) => {
     const nuevo = [...carrito];
     if (nuevo[index]) {
@@ -42,7 +39,6 @@ const Pago = () => {
     }
   };
 
-  // Eliminar producto directamente del resumen de pago
   const eliminarProducto = (index) => {
     const nuevo = carrito.filter((_, i) => i !== index);
     guardarCarrito(nuevo);

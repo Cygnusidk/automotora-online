@@ -5,7 +5,6 @@ const Carrito = () => {
   const [carrito, setCarrito] = useState([]);
   const navigate = useNavigate();
 
-  // Cargar el carrito desde localStorage
   const cargarCarrito = () => {
     try {
       const items = JSON.parse(localStorage.getItem('carrito') || '[]');
@@ -25,14 +24,12 @@ const Carrito = () => {
     return () => window.removeEventListener('cartUpdated', cargarCarrito);
   }, []);
 
-  // Función para guardar en localStorage y actualizar el contador global
   const guardarCarrito = (nuevoCarrito) => {
     setCarrito(nuevoCarrito);
     localStorage.setItem('carrito', JSON.stringify(nuevoCarrito));
     window.dispatchEvent(new Event('cartUpdated'));
   };
 
-  // Cambiar cantidad (+1 / -1) utilizando el índice de la fila
   const cambiarCantidad = (index, cambio) => {
     const nuevo = [...carrito];
     if (nuevo[index]) {
@@ -45,20 +42,17 @@ const Carrito = () => {
     }
   };
 
-  // Eliminar un producto específico por su índice
   const eliminarProducto = (index) => {
     const nuevo = carrito.filter((_, i) => i !== index);
     guardarCarrito(nuevo);
   };
 
-  // Vaciar todo el carrito
   const vaciarCarrito = () => {
     if (window.confirm('¿Seguro que deseas vaciar el carrito?')) {
       guardarCarrito([]);
     }
   };
 
-  // Convertir precios tipo "$45.000.000" o numéricos a entero
   const parsePrecio = (precio) => {
     if (typeof precio === 'number') return precio;
     if (!precio) return 0;

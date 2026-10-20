@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
 
 const Contacto = () => {
-  // Estados de los campos
   const [nombre, setNombre] = useState('');
   const [email, setEmail] = useState('');
   const [comentario, setComentario] = useState('');
 
-  // Estados de validación y respuesta
   const [errores, setErrores] = useState({});
   const [mensajeEnviado, setMensajeEnviado] = useState(false);
 
-  // Validación de campos
   const validarFormulario = () => {
     const nuevosErrores = {};
 
@@ -41,7 +38,6 @@ const Contacto = () => {
 
     if (validarFormulario()) {
       setMensajeEnviado(true);
-      // Limpiar campos tras el envío exitoso
       setNombre('');
       setEmail('');
       setComentario('');

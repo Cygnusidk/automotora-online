@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const PagoFallido = () => {
-  // Nota: NO borramos localStorage para preservar los productos en el carrito
   return (
     <main className="container text-center py-5" style={{ minHeight: '60vh' }}>
       <div className="card shadow-sm p-5 mx-auto" style={{ maxWidth: '500px', borderRadius: '12px' }}>

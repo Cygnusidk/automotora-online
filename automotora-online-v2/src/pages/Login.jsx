@@ -4,15 +4,12 @@ import { useNavigate } from 'react-router-dom';
 const Login = () => {
   const navigate = useNavigate();
 
-  // Estados para los campos del formulario
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  // Estados para mensajes de error y validación
   const [errores, setErrores] = useState({});
   const [errorAutenticacion, setErrorAutenticacion] = useState('');
 
-  // Validación de campos obligatorios y formato
   const validarFormulario = () => {
     const nuevosErrores = {};
 
@@ -30,13 +27,11 @@ const Login = () => {
     return Object.keys(nuevosErrores).length === 0;
   };
 
-  // Envío e inicio de sesión
   const handleSubmit = (e) => {
     e.preventDefault();
     setErrorAutenticacion('');
 
     if (validarFormulario()) {
-      // 1. Verificación de usuario Administrador
       if (email === 'admin@duoc.cl' && password === 'admin123') {
         const usuarioAdmin = { nombre: 'Administrador', correo: email, rol: 'Admin' };
         localStorage.setItem('usuarioActivo', JSON.stringify(usuarioAdmin));
@@ -45,7 +40,6 @@ const Login = () => {
         return;
       }
 
-      // 2. Verificación de Usuario Cliente guardado en localStorage
       const usuariosRegistrados = JSON.parse(localStorage.getItem('usuarios') || '[]');
       const usuarioEncontrado = usuariosRegistrados.find(
         (u) => u.correo === email && u.pass === password

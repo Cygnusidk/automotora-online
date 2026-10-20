@@ -41,7 +41,6 @@ const Header = () => {
     navigate('/login');
   };
 
-  // Detecta si la sesión activa corresponde a un administrador
   const esAdmin = usuario && (
     !usuario.rol || 
     usuario.rol.toLowerCase() === 'administrador' || 

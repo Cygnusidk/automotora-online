@@ -3,10 +3,8 @@ import { Link } from 'react-router-dom';
 
 const PagoExitoso = () => {
   useEffect(() => {
-    // 1. Limpia el carrito de localStorage al completar el pago
     localStorage.removeItem('carrito');
 
-    // 2. Notifica al Header para que actualice el contador a 0 en tiempo real
     window.dispatchEvent(new Event('cartUpdated'));
   }, []);
 

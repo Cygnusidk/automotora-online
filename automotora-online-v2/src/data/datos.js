@@ -1,5 +1,3 @@
-// src/data/datos.js
-
 const productosIniciales = [
   { id: 1, imagen: "img/mustang.jpg", categoria: "Deportivo", titulo: "Ford Mustang GT", precio: "$45.000.000", descripcion: "V8 5.0L de alto rendimiento" },
   { id: 5, imagen: "img/camaro.jpg", categoria: "Deportivo", titulo: "Chevrolet Camaro SS", precio: "$42.000.000", descripcion: "Motor V8 deportivo" },
@@ -13,26 +11,23 @@ const productosIniciales = [
   { id: 2, imagen: "img/rav4.jpg", categoria: "SUV", titulo: "Toyota RAV4 Híbrida", precio: "$28.500.000", descripcion: "SUV híbrido eficiente" }
 ];
 
-// READ: Obtener productos (Inicializa si no existen)
 export const obtenerProductos = () => {
   const prods = JSON.parse(localStorage.getItem('productos'));
-  if (prods && prods.length >= 10) {
+  if (prods && prods.length > 0) {
     return prods;
   } else {
-    localStorage.setItem('productos', JSON.stringify(productosIniciales));
-    return productosIniciales;
+    const copia = productosIniciales.map((p) => ({ ...p }));
+    localStorage.setItem('productos', JSON.stringify(copia));
+    return copia;
   }
 };
 
-// CREATE: Agregar producto (Para cuando uses tu panel admin)
 export const agregarProducto = (nuevoProducto) => {
   const prods = obtenerProductos();
   prods.push(nuevoProducto);
   localStorage.setItem('productos', JSON.stringify(prods));
   window.dispatchEvent(new Event('productosUpdated')); // Avisa a React que actualice
 };
-
-// UPDATE: Actualizar producto
 export const actualizarProducto = (id, datosActualizados) => {
   let prods = obtenerProductos();
   prods = prods.map(p => p.id === id ? { ...p, ...datosActualizados } : p);
@@ -40,7 +35,6 @@ export const actualizarProducto = (id, datosActualizados) => {
   window.dispatchEvent(new Event('productosUpdated'));
 };
 
-// DELETE: Eliminar producto
 export const eliminarProducto = (id) => {
   let prods = obtenerProductos();
   prods = prods.filter(p => p.id !== id);
