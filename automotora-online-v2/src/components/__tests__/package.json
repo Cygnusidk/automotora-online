@@ -1,0 +1,24 @@
+{
+  "name": "react-jasmine-testing-library",
+  "version": "1.0.0",
+  "description": "Ejemplo de entorno de pruebas Karma + Jasmine + React Testing Library",
+  "scripts": {
+    "test": "karma start karma.conf.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.0.0",
+    "babel-loader": "^9.0.0",
+    "jasmine-core": "^5.0.0",
+    "karma": "^6.4.0",
+    "karma-chrome-launcher": "^3.2.0",
+    "karma-jasmine": "^5.1.0",
+    "karma-webpack": "^5.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "webpack": "^5.0.0"
+  }
+}
